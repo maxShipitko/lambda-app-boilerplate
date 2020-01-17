@@ -1,0 +1,31 @@
+{
+  "name": "lambda-app-boilerplate",
+  "version": "1.0.0",
+  "description": "Start your next lambda project in seconds",
+  "homepage": "https://github.com/maxShipitko/lambda-app-boilerplate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxShipitko/lambda-app-boilerplate.git"
+  },
+  "author": "Maksim Shipitko",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/unit/ --timeout 5000"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "sinon": "^7.5.0",
+    "husky": "^3.0.1",
+    "aws-sdk": "^2.361.0",
+    "deep-equal": "^1.0.1",
+    "nock": "^10.0.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  }
+}
